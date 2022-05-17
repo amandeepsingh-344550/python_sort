@@ -1,0 +1,17 @@
+d = { "model": "Mustang",
+       "brand": "Ford",
+       "year": 1964
+       }
+key = input("Enter_key:").lower()
+value = input("Enter_value:")
+
+d.update({key:value})  # or d[key] = value
+
+kl = list(d.keys())
+vl = list(d.values())
+kl.sort()
+
+newd = dict.fromkeys(kl)
+for i in kl:
+  newd[i] = d[i]
+print(newd)
